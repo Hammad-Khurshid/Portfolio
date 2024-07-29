@@ -45,8 +45,11 @@
         <ul>
           <li><a href="#hero" class="active">Home<br></a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#blogs">Blogs</a></li>
           <li><a href="#contact">Contact</a></li>
+          
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -56,17 +59,17 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/hero-img.jpg" alt="" data-aos="fade-in">
-
-      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-        <h2>I'm Hammad Khurshid</h2>
-        <p><span class="typed" data-typed-items="DL/ML Expert ,  LLM/RAG Expert, AWS Cloud Solutions Specialist , Full Stack Software Developer"></span></p>
-      </div>
-
-    </section><!-- /Hero Section -->
+ <!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+  <div class="image-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
+    <img src="assets/img/hero-img.jpg" alt="" data-aos="fade-in" style="width: 100%; height: 100%; object-fit: cover;">
+    <div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+  </div>
+  <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100" style="position: relative; z-index: 2;">
+    <h2>I'm Hammad Khurshid</h2>
+    <p><span class="typed" data-typed-items="DL/ML Expert, LLM/RAG Expert, AWS Cloud Solutions Specialist, Full Stack Software Developer"></span></p>
+  </div>
+</section>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -318,7 +321,7 @@
     </section><!-- /Resume Section -->
 
     <!-- Services Section -->
-    <section id="services" class="services section">
+    <section id="Projects" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -332,9 +335,10 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
-              <div class="icon">
-                <i class="bi bi-eyeglasses"></i>
+              <div class="">
+                <img src="assets/img/deep.png" alt="Deep Image" class="icon-image">
               </div>
+              
               <a href="https://github.com/Hammad-Khurshid/Visual_assistance_for_Blind_indivuals" class="stretched-link">
                 <h3>Deep Learning</h3>
               </a>
@@ -345,8 +349,8 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-file-earmark-text"></i>
+              <div class="">
+                <img src="assets/img/ml.png" alt="Deep Image" class="icon-image">
               </div>
               <a href="https://github.com/Hammad-Khurshid/Resume_Extractor" class="stretched-link">
                 <h3>Machine Learning</h3>
@@ -356,8 +360,8 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-browser-chrome"></i>
+              <div class="">
+                <img src="assets/img/web.png" alt="Deep Image" class="icon-image">
               </div>
               <a href="https://hsmpannel.com" class="stretched-link">
                 <h3>Web Development</h3>
@@ -417,7 +421,28 @@
 
     </section><!-- /Stats Section -->
 
-  
+  <!-- Blog Section -->
+<section id="blogs" class="blogs-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Blogs</h2>
+      <p>Read latest articles and posts about Artificial Intelligence.</p>
+    </div>
+    <div class="row">
+      <!-- Blog Item -->
+      <div class="col-lg-4 col-md-6 blog-item">
+        <div class="blog-wrap">
+          <img src="https://miro.medium.com/v2/resize:fit:1080/1*OD8HRk6K9UVHU4r8EF6vrQ.png" class="img-fluid" alt="Blog Image">
+          <div class="blog-info">
+            <h3><a href="LLM.html">Evolution of Large Language Models</a></h3>
+            <p>Large Language Models have made significant strides in recent years, revolutionizing the way we interact with technology...</p>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for more blog items -->
+    </div>
+  </div>
+</section>
     <!-- Faq Section -->
     <section id="faq" class="faq section">
 
@@ -506,20 +531,20 @@
             
 
             <div class="col-lg-6">
-              <div class="info-item d-flex align-items-center">
+              <div class="info-item d-flex align-items-center clickable" onclick="window.location.href='tel:+923410637211';">
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
-                  <h3>Phone </h3>
+                  <h3>Phone</h3>
                   <p>+92 3410637211</p>
                 </div>
               </div>
             </div><!-- End Info Item -->
-
+            
             <div class="col-lg-6">
-              <div class="info-item d-flex align-items-center">
+              <div class="info-item d-flex align-items-center clickable" onclick="window.location.href='mailto:hammad.khurshid175@gmail.com';">
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
-                  <h3>Email </h3>
+                  <h3>Email</h3>
                   <p>hammad.khurshid175@gmail.com</p>
                 </div>
               </div>
@@ -568,9 +593,143 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+  <style>
+    .hero {
+      position: relative;
+      overflow: hidden; 
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1; 
+    }
+
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  </style>
+
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 60,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#fff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+       
+      },
+      "opacity": {
+        "value": 0.7,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.5,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.6,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.9,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": true,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 0.5
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 60,
+          "duration": 2,
+          "opacity": 1,
+          "speed": 5
+        },
+        "repulse": {
+          "distance": 10,
+          "duration": 0.2
+        },
+        "push": {
+          "particles_nb": 6
+        },
+        "remove": {
+          "particles_nb": 5
+        }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
 
 </body>
 
