@@ -27,6 +27,75 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    /*--------------------------------------------------------------
+    # Enhanced UI Styles
+    --------------------------------------------------------------*/
+
+    /* Glassmorphism Header */
+    .header {
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+      transition: all 0.5s;
+    }
+
+    .scrolled .header {
+      background-color: rgba(25, 28, 31, 0.8);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); /* For Safari */
+      box-shadow: 0px 0 18px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Interactive Cards */
+    .service-item,
+    .blog-wrap {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item:hover,
+    .blog-wrap:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Service item icon color on hover */
+    .service-item:hover h3 a {
+      color: var(--accent-color);
+    }
+
+    /* Enhanced Skill Badges */
+    .skills-content {
+      margin-top: 30px;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .skill-badge {
+      background: #f0f0f0;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border: 1px solid #ddd;
+    }
+    .skill-badge:hover {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-color: var(--accent-color);
+    }
+
+    /* Professional Resume Timeline */
+    .resume .resume-item {
+      border-left-color: var(--accent-color);
+    }
+  </style>
 
 </head>
 
@@ -85,99 +154,61 @@
               </div>
               <div class="col-lg-7 about-info">
                 <p><strong>Name: </strong> <span>Hammad Khurshid</span></p>
-                <p><strong>Profile: </strong> <span>DL/ML & LLM/RAG Expert | Full Stack Software Developer | AWS Cloud Solutions Specialist</span></p>
+                <p><strong>Profile: </strong> <span> Full Stack Software/AI Developer </span></p>
                 <p><strong>Email: </strong> <span>hammad.khurshid175@gmail.com</span></p>
                 <p><strong>Phone: </strong> <span>+92 3410637211</span></p>
               </div>
             </div>
 
-            <div class="skills-content skills-animation">
-
+            <div class="skills-content">
               <h5>Skills</h5>
-              <h6>Languages</h6>
-              <div class="progress">
-                <span class="skill"><span>Python, Javascript, C++, C</span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              <div class="progress">
-                <span class="skill"><span>HTML, CSS</span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              <p></p>
-              <h6>AI </h6>
 
-              
-              <div class="progress">
-                <span class="skill"><span>Machine Learning, Deep Learning</span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              
-              <div class="progress">
-                <span class="skill"><span>RAG, LLMs, CNN, RNN, ANN</span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              
-              <div class="progress">
-                <span class="skill"><span>Object detection, Recognition, Segmentation </span></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              
-              <div class="progress">
-                <span class="skill"><span>Prompts</span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              
-              <p></p>
-              <h6>Cloud and Web Development</h6>
+              <h6>Languages & Databases</h6>
+              <div class="skills-grid">
+                <div class="skill-badge">Python</div>
+                <div class="skill-badge">JavaScript</div>
+                <div class="skill-badge">C++</div>
+                <div class="skill-badge">C</div>
+                <div class="skill-badge">HTML</div>
+                <div class="skill-badge">CSS</div>
+                <div class="skill-badge">MongoDB</div>
+                <div class="skill-badge">SQL</div>
+                <div class="skill-badge">MySQL</div>
+                <div class="skill-badge">PostgreSQL</div>
+                <div class="skill-badge">SQLite</div>
+                <div class="skill-badge">Mongoose</div>
+                <div class="skill-badge">DynamoDB</div>
 
-              <div class="progress">
-                <span class="skill"><span>A W S</span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
 
-              </div><!-- End Skills Item -->
-              <div class="progress">
-                <span class="skill"><span>Git, Github, Gitlab</span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
+              </div>
 
-              
-              <div class="progress">
-                <span class="skill"><span>React js</span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
+              <h6>AI & Machine Learning</h6>
+              <div class="skills-grid">
+                <div class="skill-badge">Machine Learning</div>
+                <div class="skill-badge">Deep Learning</div>
+                <div class="skill-badge">RAG</div>
+                <div class="skill-badge">LLMs</div>
+                <div class="skill-badge">CNN</div>
+                <div class="skill-badge">RNN</div>
+                <div class="skill-badge">ANN</div>
+                <div class="skill-badge">Object Detection</div>
+                <div class="skill-badge">Prompt Engineering</div>
+              </div>
 
-              <div class="progress">
-                <span class="skill"><span>Node js, Express js, Flask</span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Bootstrap, Material ui </span> </span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
+              <h6>Cloud & Web Development</h6>
+              <div class="skills-grid">
+                <div class="skill-badge">AWS</div>
+                <div class="skill-badge">Node.js</div>
+                <div class="skill-badge">Express.js</div>
+                <div class="skill-badge">React.js</div>
+                <div class="skill-badge">Redux</div>
+                <div class="skill-badge">Flask</div>
+                <div class="skill-badge">Bootstrap</div>
+                <div class="skill-badge">Material-UI</div>
+                <div class="skill-badge">Git</div>
+                <div class="skill-badge">GitHub</div>
+                <div class="skill-badge">GitLab</div>
+              </div>
             </div>
           </div>
 
@@ -185,23 +216,22 @@
             <div class="about-me">
               <h4>About me</h4>
               <p>
-                I am a driven individual with a Bachelor's degree in Artificial Intelligence, equipped with specialized knowledge in machine learning, deep learning, large language models (LLMs), retrieval-augmented generation (RAG), natural language processing, and computer vision.
-            </p>
-            <p>
+                As a passionate and driven AI specialist with a Bachelor's degree in Artificial Intelligence, I am equipped with specialized knowledge in machine learning, deep learning, large language models (LLMs), retrieval-augmented generation (RAG), natural language processing, and computer vision.
+              </p>
+              <p>
                 In addition to my expertise, I have completed courses in AWS Cloud Practitioner and Full Stack Web Development, focusing on EC2 instances, RDS, EBS, S3 bucket, Route 53, React.js, HTML, CSS, JavaScript, Node.js, and Express.js.
-            </p>
-            <p>
+              </p>
+              <p>
                 In the AI field, I have completed courses in:
-            </p>
-            <ul>
+              </p>
+              <ul>
                 <li>Deep Learning</li>
                 <li>LLM Mastery: ChatGPT, Gemini, Claude, Llama3, OpenAI & APIs</li>
                 <li>Basics to AI-Agents: OpenAI API, Gemini API, Open-source LLMs, GPT-4, RAG, LangChain Apps, Colab, Prompt Engineering</li>
-            </ul>
-            <p>
+              </ul>
+              <p>
                 I have specialized in developing LLM, fine tuning, CNN, RNN, and ANN models. With a strong academic background and practical experience in various domains of technology, I am poised to contribute effectively to innovative projects and tackle complex challenges in the fields of artificial intelligence and cloud computing.
-            </p>
-            
+              </p>
             </div>
           </div>
         </div>
@@ -230,8 +260,8 @@
               <h5>2020 - 2024</h5>
               <p><em>Hazara University Mansehra</em></p>
               <p>
-                I have maintained excellent grades throughout my studies, securing a degree with an impressive 89% as a 3.59/4 CGPA.
-            </p>
+                I have maintained excellent grades throughout my studies, securing a degree with an impressive 89% (3.59/4.00 CGPA).
+              </p>
             </div><!-- Edn Resume Item -->
 
 
@@ -257,7 +287,7 @@
                   <strong>Celebrity Face Recognition</strong>: Developed using web development skills and Clarifai API. This project involved building a web application that can recognize and identify celebrity faces from images.
                 </li>
                 <li>
-                  <strong>Candidate Data Extractor</strong>: Created using Python libraries and Flask. This project involved developing a simple application to extract and process candidate data from various sources.
+                  <strong>Candidate Data Extractor</strong>: Created using Python libraries and Flask. This project involved developing a robust application to extract and process candidate data from various sources.
                 </li>
                 <li>
                   <strong>Hand Gesture Detection</strong>: Developed using Python libraries and open-source datasets. The system can detect gestures such as hand open, hand close, and pointer.
@@ -279,16 +309,30 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
+              <h4>Full Stack Software Engineer</h4>
+              <h5>Aug 2024 - Present</h5>
+              <p><em>Lootpaw Pets</em></p>
+              <h2>Key Responsibilities & Contributions</h2>
+              <ul>
+                <li>Designed and implemented new features, while continuously enhancing existing ones, within the mobile application
+                  to improve user experience and functionality.</li>
+                <li>Maintained and updated the company's official website to ensure up-to-date content and optimized performance.</li>
+                <li>Integrated Bluetooth-based IoT tracking devices with the application to enable real-time communication and device
+                  control.</li>
+                <li>Led frontend development using modern tools including <strong>React.js</strong>, <strong>Redux</strong>, and
+                  <strong>RTK Query</strong> to create responsive and scalable interfaces.</li>
+                <li>Engineered robust backend services using <strong>Node.js</strong>, <strong>Express.js</strong>, and
+                  <strong>MongoDB</strong> to support complex business logic and secure data handling.</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
               <h4>Junior Software Developer</h4>
-              <h5> 06/2023- present (on demand)</h5>
+              <h5> 06/2023- 06/2024</h5>
               <p><em>FireText Dispatch Solution, US  </em></p>
               <ul>
-                <li>Worked as a Junior Software Developer for a USA-based company, contributing to both maintenance tasks and
-                  the development of new features
-                  During this 1 year, actively engaged in enhancing existing software functionalities while also
-                  spearheading the creation of innovative features
-                  Demonstrated proficiency in software development practices and collaborated effectively within a
-                  dynamic team environment to meet project objectives.</li>
+                <li>Contributed to the maintenance of existing software and the development of new features for a US-based company.</li>
+                <li>Enhanced software functionalities and led the creation of innovative features to improve user experience.</li>
+                <li>Collaborated effectively within a dynamic team environment, demonstrating strong software development practices.</li>
               </ul>
             </div><!-- Edn Resume Item -->
 
@@ -325,7 +369,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Projects</h2>
+        <h2>Sample Projects</h2>
         <p></p>
       </div><!-- End Section Title -->
 
@@ -389,28 +433,28 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="10+" data-purecounter-duration="0" class="purecounter">10+</span>
+              <span data-purecounter-start="0" data-purecounter-end="12+" data-purecounter-duration="0" class="purecounter">10+</span>
               <p>Clients</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="0" class="purecounter">15</span>
+              <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="0" class="purecounter">16</span>
               <p>Projects</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="550" data-purecounter-duration="0" class="purecounter">550</span>
+              <span data-purecounter-start="0" data-purecounter-end="1550" data-purecounter-duration="0" class="purecounter">1550</span>
               <p>Hours Of Support</p>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="0" class="purecounter">5</span>
+              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="0" class="purecounter">6</span>
               <p>Certificates</p>
             </div>
           </div><!-- End Stats Item -->
